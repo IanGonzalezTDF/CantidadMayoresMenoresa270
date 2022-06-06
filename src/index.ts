@@ -4,7 +4,7 @@ let menores: number = 0;
 let mayores: number = 0;
 
 for (indice = 0; indice < 270; indice++) {
-  cantidadTotal[indice] = valorEdades(18, 41);
+  cantidadTotal[indice] = valorEdades(41);
   if (cantidadTotal[indice] >= 21) {
     mayores++;
   } else if (cantidadTotal[indice] < 21) {
@@ -15,6 +15,6 @@ console.log("La cantidad total de personas es: ", cantidadTotal);
 console.log("La cantidad de personas MAYORES a 21 es:", mayores);
 console.log("La cantidad de personas MENORES a 21", menores);
 
-function valorEdades(min, max): number {
-  return Math.floor(Math.random() * (max - min)) + min;
+function valorEdades(tope: number): number {
+  return Math.floor(Math.random() * tope);
 }
