@@ -2,12 +2,12 @@ let cantidadTotal: number[] = new Array(270);
 let menores: number = 0;
 let mayores: number = 0;
 
-function valorEdades(tope: number): number {
-  return Math.floor(Math.random() * tope);
+function valorEdades(min: number, max: number): number {
+  return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 for (let indice = 0; indice < 270; indice++) {
-  cantidadTotal[indice] = valorEdades(41);
+  cantidadTotal[indice] = valorEdades(18, 40);
   if (cantidadTotal[indice] >= 21) {
     mayores++;
   } else {
